@@ -3,3 +3,18 @@
     border-top: 1px solid #b1b4b6;
     padding-top: 30px;
 }
+
+/* Card Blocks */
+
+.fs-card-block {
+    border: 1px solid #b1b4b6;
+    background: #fff;
+}
+
+.fs-card-block img {
+    width: 100%;
+}
+
+.fs-card-block__content {
+    padding: 15px;
+}
