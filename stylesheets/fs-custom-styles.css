@@ -1,0 +1,5 @@
+/* Search Results */
+.fs-search-results-list__item:not(:first-child) {
+    border-top: 1px solid #b1b4b6;
+    padding-top: 30px;
+}
