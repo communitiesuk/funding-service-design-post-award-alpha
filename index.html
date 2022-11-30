@@ -54,228 +54,23 @@
 
   <div class="govuk-width-container">
 
-    <div class="govuk-breadcrumbs">
-      <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="#">Department for Levelling Up, Housing & Communities</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="#">Funded projects</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="#">Find project data</a>
-        </li>
-      </ol>
-    </div>
-
     <main class="govuk-main-wrapper" id="main-content" role="main">
 
-      <h1 class="govuk-heading-xl">Find project data</h1>
+      <h1 class="govuk-heading-xl">Alpha - M&E Design Exploration V1</h1>
 
       <div class="govuk-grid-row">
 
-        <div class="govuk-grid-column-two-thirds">
-
-          <p class="govuk-body-l">Use this tool to find monitoring and evaluation data for funded projects.</p>
-
-          <form action="#results" method="post" novalidate>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="submitted-by">
-                Data submitted by
-              </label>
-              <select class="govuk-select" id="submitted-by" name="submitted-by">
-                <option value="all">All</option>
-                <option value="wldc" selected>West Lindsey District Council</option>
-              </select>
-            </div>
-
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="area">
-                Area
-              </label>
-              <select class="govuk-select" id="area" name="area">
-                <option value="all">All</option>
-                <option value="east-midlands" selected>East Midlands</option>
-              </select>
-            </div>
-
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="fund">
-                Fund
-              </label>
-              <select class="govuk-select" id="fund" name="fund">
-                <option value="levelling-up" selected>Levelling Up Fund</option>
-              </select>
-            </div>
-
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="investment-theme">
-                Investment theme
-              </label>
-              <select class="govuk-select" id="investment-theme" name="investment-theme">
-                <option value="regeneration" selected>Regeneration</option>
-              </select>
-            </div>
-
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="data-type">
-                Data type
-              </label>
-              <select class="govuk-select" id="data-type" name="data-type">
-                <option value="evaluation" selected>Evaluation</option>
-              </select>
-            </div>
-
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" role="group" aria-describedby="timeframe">
-                <legend class="govuk-fieldset__legend">
-                  Timeframe
-                </legend>
-                <div class="govuk-date-input" id="passport-issued">
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <input class="govuk-input govuk-date-input__input" id="timeframe-from" name="timeframe-from"
-                        type="date">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <p class="govuk-body">to</p>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <input class="govuk-input govuk-date-input__input" id="timeframe-to" name="timeframe-to"
-                        type="date">
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="data-format">
-                Data format
-              </label>
-              <select class="govuk-select" id="data-format" name="data-format">
-                <option value="csv" selected>CSV</option>
-              </select>
-            </div>
-
-            <button class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">Search</button>
-          </form>
-
-        </div>
-
-        <div class="govuk-grid-column-full">
-          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-        </div>
-
-        <div id="results" class="govuk-grid-column-full">
-          <h2 class="govuk-heading-l">Search results</h2>
-        </div>
-
-        <div class="govuk-grid-column-full">
-          <ul class="govuk-list">
-            <li class="fs-search-results-list__item">
-              <h3 class="govuk-heading-m govuk-!-margin-bottom-1"><a class="govuk-link" href="/search/result.html">Fenn's shopping centre
-                  footfall project
-                  outcomes 2021</a></h3>
-              <p class="govuk-body-s">Last updated: 8 August 2022 | Levelling Up Fund | 3 MB</p>
-              <p>Fenn's shopping centre in Lincoln city centre has experienced a decline in footfall
-                in recent years. In 2021, local businesses in the area have worked together to increase footfall in the
-                shopping centre and surrounding area in order to support local retailers.</p>
-              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Download</button>
-            </li>
-            <li class="fs-search-results-list__item">
-              <h3 class="govuk-heading-m govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Hedge Hill project
-                  outcomes 2021</a></h3>
-              <p class="govuk-body-s govuk-!-margin-bottom-2">Last updated: 20 July 2022 | Levelling Up Fund | 5 MB</p>
-              <p>A lack of integrated investment together with out of town retail and residential growth has led to
-                different areas of Hedgehill city centre being less well connected, and major assets like the historic
-                area less well used than it should be. Over the last year residents, businesses and a range of local
-                institutions have worked together, through Hedgehill Connections and Hedgehill city, to set clear
-                priorities and a vision for Hedgehill.</p>
-              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Download</button>
-            </li>
-          </ul>
-
-          <div class="govuk-grid-row">
-            <ul class="govuk-list">
-              <li class="govuk-grid-column-one-quarter">
-                <div class="fs-card-block">
-                  <img src="/assets/images/govuk-opengraph-image.png" alt="">
-                  <div class="fs-card-block__content">
-                    <p class="govuk-body-s"><a class="govuk-link govuk-!-font-weight-bold" href="/search/result.html">Fenn's
-                        shopping centre
-                        footfall project
-                        outcomes 2021</a></p>
-                    <ul class="govuk-list">
-                      <li class="govuk-body-s">
-                        <strong>Last updated:</strong> 8 Aug 2022
-                      </li>
-                      <li class="govuk-body-s">
-                        <strong>Fund:</strong> Levelling Up
-                      </li>
-                      <li class="govuk-body-s">
-                        <strong>Frequency:</strong> Annual
-                      </li>
-                    </ul>
-                    <p class="govuk-body-s">Fenn's shopping centre in Lincoln city centre has experienced a decline in
-                      footfall in recent years...</p>
-                    <div>
-                      <strong class="govuk-tag govuk-tag--grey">
-                        CSV
-                      </strong>
-                      <strong class="govuk-tag govuk-tag--grey">
-                        JSON
-                      </strong>
-                      <strong class="govuk-tag govuk-tag--grey">
-                        XML
-                      </strong>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="govuk-grid-column-one-quarter">
-                <div class="fs-card-block">
-                  <img src="/assets/images/govuk-opengraph-image.png" alt="">
-                  <div class="fs-card-block__content">
-                    <p class="govuk-body-s"><a class="govuk-link govuk-!-font-weight-bold" href="#">Hedge Hill project
-                        outcomes 2021</a></p>
-                    <ul class="govuk-list">
-                      <li class="govuk-body-s">
-                        <strong>Last updated:</strong> 20 Jul 2022
-                      </li>
-                      <li class="govuk-body-s">
-                        <strong>Fund:</strong> Levelling Up
-                      </li>
-                      <li class="govuk-body-s">
-                        <strong>Frequency:</strong> Annual
-                      </li>
-                    </ul>
-                    <p class="govuk-body-s">A lack of integrated investment together with out of town retail and
-                      residential growth has led to...</p>
-                    <div>
-                      <strong class="govuk-tag govuk-tag--grey">
-                        CSV
-                      </strong>
-                      <strong class="govuk-tag govuk-tag--grey">
-                        JSON
-                      </strong>
-                      <strong class="govuk-tag govuk-tag--grey">
-                        XML
-                      </strong>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+          <h2 class="govuk-heading-l"><a class="govuk-link govuk-!-font-weight-bold" href="landing-one.html">Landing
+              Page - Option 1</a></h2>
+          <h2 class="govuk-heading-l"><a class="govuk-link govuk-!-font-weight-bold" href="landing-two.html">Landing
+              Page - Option 2</a></h2>
         </div>
 
       </div>
+  </div>
 
-    </main>
+  </main>
 
   </div>
 

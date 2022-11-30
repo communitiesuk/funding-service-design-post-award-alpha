@@ -11,10 +11,12 @@
     background: #fff;
 }
 
-.fs-card-block img {
-    width: 100%;
-}
-
 .fs-card-block__content {
     padding: 15px;
+}
+
+/* Utilities */
+
+.fs-img-border {
+    border: 1px solid #b1b4b6;
 }
