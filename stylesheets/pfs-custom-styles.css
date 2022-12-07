@@ -1,22 +1,31 @@
+/* Header Logo */
+.pfs-header__logo {
+    width: auto;
+}
+
 /* Search Results */
-.fs-search-results-list__item:not(:first-child) {
+.pfs-search-results-list__item:not(:first-child) {
     border-top: 1px solid #b1b4b6;
     padding-top: 30px;
 }
 
 /* Card Blocks */
 
-.fs-card-block {
+.pfs-card-block {
     border: 1px solid #b1b4b6;
     background: #fff;
 }
 
-.fs-card-block__content {
+.pfs-card-block__content {
     padding: 15px;
 }
 
 /* Utilities */
 
-.fs-img-border {
+.pfs-section-bg-alt {
+    background-color: #f8f8f8;
+}
+
+.pfs-img-border {
     border: 1px solid #b1b4b6;
 }

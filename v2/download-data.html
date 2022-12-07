@@ -56,26 +56,30 @@
     <div class="govuk-breadcrumbs">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/v1/index.html">Department for Levelling Up, Housing &
+          <a class="govuk-breadcrumbs__link" href="/v2/index.html">Department for Levelling Up, Housing &
             Communities</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/v1/index.html">Funded projects</a>
+          <a class="govuk-breadcrumbs__link" href="/v2/index.html">Funded projects</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="#">Find project data</a>
+          <a class="govuk-breadcrumbs__link" href="/v2/index.html">Find project data</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="#">Download data</a>
         </li>
       </ol>
     </div>
     <main class="govuk-main-wrapper" id="main-content" role="main">
-      <h1 class="govuk-heading-xl">Find project data</h1>
+      <h1 class="govuk-heading-xl">Search for monitoring and evaluation data</h1>
+      <p class="govuk-body-l">Use the filters on this page to find project data submitted by funded organisations. You
+        can also download this information.</p>
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-body-l">Use this tool to find monitoring and evaluation data for funded projects.</p>
           <form action="#results" method="post" novalidate>
             <div class="govuk-form-group">
               <label class="govuk-label" for="submitted-by">
-                Data submitted by
+                Fund(s)
               </label>
               <select class="govuk-select" id="submitted-by" name="submitted-by">
                 <option value="all">All</option>
@@ -84,7 +88,7 @@
             </div>
             <div class="govuk-form-group">
               <label class="govuk-label" for="area">
-                Area
+                Area(s)
               </label>
               <select class="govuk-select" id="area" name="area">
                 <option value="all">All</option>
@@ -93,38 +97,93 @@
             </div>
             <div class="govuk-form-group">
               <label class="govuk-label" for="fund">
-                Fund
+                Fund recipient(s)
               </label>
               <select class="govuk-select" id="fund" name="fund">
                 <option value="levelling-up" selected>Levelling Up Fund</option>
               </select>
             </div>
             <div class="govuk-form-group">
-              <label class="govuk-label" for="investment-theme">
-                Investment theme
-              </label>
-              <select class="govuk-select" id="investment-theme" name="investment-theme">
-                <option value="regeneration" selected>Regeneration</option>
-              </select>
+              <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                <legend class="govuk-fieldset__legend">
+                  Data type
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email">
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                      Project admin
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone">
+                    <label class="govuk-label govuk-checkboxes__label" for="contact-2">
+                      Project progress
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone">
+                    <label class="govuk-label govuk-checkboxes__label" for="contact-2">
+                      Risk register
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone">
+                    <label class="govuk-label govuk-checkboxes__label" for="contact-2">
+                      Funding profile
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox"
+                      value="text message" data-aria-controls="conditional-contact-3">
+                    <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+                      Outcomes
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
+                    id="conditional-contact-3">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="contact-by-text">
+                        Select outcome(s)
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text"
+                        type="tel" autocomplete="tel">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
             </div>
             <div class="govuk-form-group">
-              <label class="govuk-label" for="data-type">
-                Data type
-              </label>
-              <select class="govuk-select" id="data-type" name="data-type">
-                <option value="evaluation" selected>Evaluation</option>
-              </select>
-            </div>
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" role="group" aria-describedby="timeframe">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="timeframe-hint">
                 <legend class="govuk-fieldset__legend">
                   Timeframe
                 </legend>
                 <div class="govuk-date-input" id="timeframe">
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
-                      <input class="govuk-input govuk-date-input__input" id="timeframe-from" name="timeframe-from"
-                        type="date">
+                      <label class="govuk-label govuk-date-input__label" for="timeframe-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="timeframe-day"
+                        name="timeframe-day" type="text" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="timeframe-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="timeframe-month"
+                        name="timeframe-month" type="text" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="timeframe-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="timeframe-year"
+                        name="timeframe-year" type="text" inputmode="numeric">
                     </div>
                   </div>
                   <div class="govuk-date-input__item">
@@ -132,8 +191,29 @@
                   </div>
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
-                      <input class="govuk-input govuk-date-input__input" id="timeframe-to" name="timeframe-to"
-                        type="date">
+                      <label class="govuk-label govuk-date-input__label" for="timeframe-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="timeframe-day"
+                        name="timeframe-day" type="text" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="timeframe-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="timeframe-month"
+                        name="timeframe-month" type="text" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="timeframe-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="timeframe-year"
+                        name="timeframe-year" type="text" inputmode="numeric">
                     </div>
                   </div>
                 </div>
@@ -147,7 +227,7 @@
                 <option value="csv" selected>CSV</option>
               </select>
             </div>
-            <button class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">Search</button>
+            <button class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">Download</button>
           </form>
         </div>
         <div class="govuk-grid-column-full">
