@@ -29,3 +29,157 @@
 .pfs-img-border {
     border: 1px solid #b1b4b6;
 }
+
+
+/* Semantic UI Dropdown - Overrides */
+
+.pfs-multi-select {
+    font-family: GDS Transport, arial, sans-serif !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    font-size: 1rem !important;
+    line-height: 1.25 !important;
+    box-sizing: border-box !important;
+    min-width: 11.5em !important;
+    max-width: 100% !important;
+    height: auto !important;
+    padding: 5px 20px 5px 5px !important;
+    border: 2px solid #0b0c0c !important;
+    color: #0b0c0c !important;
+    background-color: #fff !important;
+    border-radius: 0 !important;
+}
+
+.pfs-multi-select:focus {
+    outline: 3px solid #fd0 !important;
+    outline-offset: 0 !important;
+    box-shadow: inset 0 0 0 2px !important;
+    border-radius: 0 !important;
+}
+
+.pfs-multi-select.active.upward.selection.dropdown.visible {
+    border-radius: 0 !important;
+}
+
+.pfs-multi-select.upward.selection.dropdown .menu {
+    border-top-width: 2px !important;
+}
+
+.pfs-multi-select.active.selection.dropdown .menu {
+    border-radius: 0 !important;
+}
+
+.pfs-multi-select.selection.dropdown .menu {
+    margin: 0px -2px !important;
+    min-width: calc(100% + 4px) !important;
+    width: 100% !important;
+}
+
+.pfs-multi-select .menu {
+    border-radius: 0 !important;
+    border: 2px solid #0b0c0c !important;
+}
+
+.pfs-multi-select.multiple.dropdown>.text {
+    margin: 4px 0px 0px 4px !important;
+    color: #0b0c0c !important;
+}
+
+@media (min-width: 40.0625em) {
+    .pfs-multi-select.multiple.dropdown>.text {
+        margin: 2px 0px 0px 4px !important;
+        font-size: 1.1875rem;
+    }
+}
+
+.pfs-multi-select .menu>.item {
+    border: 0 !important;
+}
+
+.pfs-multi-select .menu>.item:hover {
+    background-color: #1d70b8 !important;
+    color: #ffffff !important;
+}
+
+.pfs-multi-select.multiple.dropdown>.label {
+    display: inline-block !important;
+    outline: 2px solid rgba(0, 0, 0, 0) !important;
+    outline-offset: -2px !important;
+    color: #383f43 !important;
+    background-color: #eeefef !important;
+    letter-spacing: 1px !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    font-family: GDS Transport, arial, sans-serif !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    font-size: .875rem !important;
+    line-height: 1 !important;
+    padding: 5px 8px 4px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important
+}
+
+.pfs-multi-select.dropdown>.dropdown.icon {
+    right: 0 !important;
+    margin-right: 0 !important;
+    padding-right: 2px !important;
+    color: #0b0c0c !important;
+    font-size: 10px !important;
+    opacity: 1 !important;
+}
+
+.pfs-multi-select.multiple.dropdown>.label>.delete.icon {
+    opacity: 0.6 !important;
+    font-size: 11px !important;
+}
+
+.pfs-multi-select.multiple.dropdown>.label>.delete.icon:hover {
+    opacity: 1 !important;
+}
+
+@font-face {
+    font-family: 'icons';
+    src: url('icons/icons.eot?18482551');
+    src: url('icons/icons.eot?18482551#iefix') format('embedded-opentype'),
+        url('icons/icons.woff2?18482551') format('woff2'),
+        url('icons/icons.woff?18482551') format('woff'),
+        url('icons/icons.ttf?18482551') format('truetype'),
+        url('icons/icons.svg?18482551#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+i.icon:before,
+i.icon:before {
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon.delete:before {
+    content: '\e800' !important;
+    margin-right: 0 !important;
+}
+
+.icon.dropdown:before {
+    content: '\e803' !important;
+
+}

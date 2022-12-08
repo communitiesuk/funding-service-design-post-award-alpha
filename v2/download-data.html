@@ -76,7 +76,7 @@
         can also download this information.</p>
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <form action="#results" method="post" novalidate>
+          <form action="/v2/download-data-details.html#details" method="post" novalidate>
             <div class="govuk-form-group">
               <label class="govuk-label" for="submitted-by">
                 Fund(s)
@@ -110,38 +110,38 @@
                 </legend>
                 <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email">
-                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    <input class="govuk-checkboxes__input" id="admin" name="admin" type="checkbox" value="admin">
+                    <label class="govuk-label govuk-checkboxes__label" for="admin">
                       Project admin
                     </label>
                   </div>
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone">
-                    <label class="govuk-label govuk-checkboxes__label" for="contact-2">
+                    <input class="govuk-checkboxes__input" id="progress" name="contact" type="checkbox" value="progress">
+                    <label class="govuk-label govuk-checkboxes__label" for="progress">
                       Project progress
                     </label>
                   </div>
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone">
-                    <label class="govuk-label govuk-checkboxes__label" for="contact-2">
+                    <input class="govuk-checkboxes__input" id="register" name="contact" type="checkbox" value="register">
+                    <label class="govuk-label govuk-checkboxes__label" for="register">
                       Risk register
                     </label>
                   </div>
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone">
-                    <label class="govuk-label govuk-checkboxes__label" for="contact-2">
+                    <input class="govuk-checkboxes__input" id="profile" name="contact" type="checkbox" value="profile">
+                    <label class="govuk-label govuk-checkboxes__label" for="profile">
                       Funding profile
                     </label>
                   </div>
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox"
-                      value="text message" data-aria-controls="conditional-contact-3">
-                    <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+                    <input class="govuk-checkboxes__input" id="outcome" name="contact" type="checkbox"
+                      value="text message" data-aria-controls="conditional-outcome">
+                    <label class="govuk-label govuk-checkboxes__label" for="outcome">
                       Outcomes
                     </label>
                   </div>
                   <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
-                    id="conditional-contact-3">
+                    id="conditional-outcome">
                     <div class="govuk-form-group">
                       <label class="govuk-label" for="contact-by-text">
                         Select outcome(s)
@@ -227,40 +227,15 @@
                 <option value="csv" selected>CSV</option>
               </select>
             </div>
-            <button class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">Download</button>
+            <div class="govuk-button-group govuk-!-margin-bottom-0">
+              <button type="submitn" class="govuk-button" data-module="govuk-button">
+                Download
+              </button>
+              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Preview
+              </button>
+            </div>
           </form>
-        </div>
-        <div class="govuk-grid-column-full">
-          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-        </div>
-        <div id="results" class="govuk-grid-column-full">
-          <h2 class="govuk-heading-l">Search results</h2>
-        </div>
-        <div class="govuk-grid-column-full">
-          <ul class="govuk-list govuk-!-margin-bottom-0">
-            <li class="pfs-search-results-list__item">
-              <h3 class="govuk-heading-m govuk-!-margin-bottom-1"><a class="govuk-link"
-                  href="/v1/search/project-one.html">Fenn's shopping centre
-                  footfall project
-                  outcomes 2021</a></h3>
-              <p class="govuk-body-s">Last updated: 8 August 2022 | Levelling Up Fund | 3 MB</p>
-              <p>Fenn's shopping centre in Lincoln city centre has experienced a decline in footfall
-                in recent years. In 2021, local businesses in the area have worked together to increase footfall in the
-                shopping centre and surrounding area in order to support local retailers.</p>
-              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Download</button>
-            </li>
-            <li class="pfs-search-results-list__item">
-              <h3 class="govuk-heading-m govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Hedge Hill project
-                  outcomes 2021</a></h3>
-              <p class="govuk-body-s govuk-!-margin-bottom-2">Last updated: 20 July 2022 | Levelling Up Fund | 5 MB</p>
-              <p>A lack of integrated investment together with out of town retail and residential growth has led to
-                different areas of Hedgehill city centre being less well connected, and major assets like the historic
-                area less well used than it should be. Over the last year residents, businesses and a range of local
-                institutions have worked together, through Hedgehill Connections and Hedgehill city, to set clear
-                priorities and a vision for Hedgehill.</p>
-              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Download</button>
-            </li>
-          </ul>
         </div>
       </div>
     </main>
