@@ -18,6 +18,8 @@
 
   <!--[if !IE 8]><!-->
   <link href="/stylesheets/govuk-frontend-4.4.0.min.css" rel="stylesheet">
+  <link href="/stylesheets/dropdown.min.css" rel="stylesheet">
+  <link href="/stylesheets/transition.min.css" rel="stylesheet">
   <link href="/stylesheets/pfs-custom-styles.css" rel="stylesheet">
   <!--<![endif]-->
 
@@ -29,6 +31,16 @@
 <body class="govuk-template__body">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+  </script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="/javascript/dropdown.min.js"></script>
+  <script src="/javascript/transition.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      console.log("ready!");
+      $('.pfs-multi-select').dropdown();
+    });
   </script>
 
   <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
@@ -71,42 +83,47 @@
       </ol>
     </div>
     <main class="govuk-main-wrapper" id="main-content" role="main">
-      <h1 class="govuk-heading-xl">Search for monitoring and evaluation data</h1>
-      <p class="govuk-body-l">Use the filters on this page to find project data submitted by funded organisations. You
-        can also download this information.</p>
+      <h1 class="govuk-heading-xl">Download monitoring and evaluation data</h1>
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <form action="/v2/download-data-details.html#details" method="post" novalidate>
+          <form action="/v2/download-data-results.html#results" method="post" novalidate>
             <div class="govuk-form-group">
-              <label class="govuk-label" for="submitted-by">
-                Fund(s)
+              <label class="govuk-label" for="funds">
+                Filter by fund
               </label>
-              <select class="govuk-select" id="submitted-by" name="submitted-by">
-                <option value="all">All</option>
-                <option value="wldc" selected>West Lindsey District Council</option>
+              <select name="funds" class="ui selection dropdown govuk-select pfs-multi-select" multiple="" id="funds">
+                <option value="">Select fund(s)</option>
+                <option value="LU">Levelling Up Fund</option>
+                <option value="TF">Towns Fund</option>
               </select>
             </div>
             <div class="govuk-form-group">
               <label class="govuk-label" for="area">
-                Area(s)
+                Filter by area
               </label>
-              <select class="govuk-select" id="area" name="area">
-                <option value="all">All</option>
-                <option value="east-midlands" selected>East Midlands</option>
+              <select name="areas" class="ui selection dropdown govuk-select pfs-multi-select" multiple="" id="areas">
+                <option value="">Select area(s)</option>
+                <option value="NE">North East</option>
+                <option value="NW">North West</option>
+                <option value="SE">South East</option>
+                <option value="SW">South West</option>
               </select>
             </div>
             <div class="govuk-form-group">
               <label class="govuk-label" for="fund">
-                Fund recipient(s)
+                Filter by funded organisation
               </label>
-              <select class="govuk-select" id="fund" name="fund">
-                <option value="levelling-up" selected>Levelling Up Fund</option>
+              <select name="recipient" class="ui selection dropdown govuk-select pfs-multi-select" multiple=""
+                id="recipient">
+                <option value="">Select organisation(s)</option>
+                <option value="BH">Brighton and Hove</option>
+                <option value="BU">Buckinghamshire</option>
               </select>
             </div>
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                 <legend class="govuk-fieldset__legend">
-                  Data type
+                  Filter by data type
                 </legend>
                 <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
@@ -116,13 +133,15 @@
                     </label>
                   </div>
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="progress" name="contact" type="checkbox" value="progress">
+                    <input class="govuk-checkboxes__input" id="progress" name="contact" type="checkbox"
+                      value="progress">
                     <label class="govuk-label govuk-checkboxes__label" for="progress">
                       Project progress
                     </label>
                   </div>
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="register" name="contact" type="checkbox" value="register">
+                    <input class="govuk-checkboxes__input" id="register" name="contact" type="checkbox"
+                      value="register">
                     <label class="govuk-label govuk-checkboxes__label" for="register">
                       Risk register
                     </label>
@@ -143,11 +162,16 @@
                   <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
                     id="conditional-outcome">
                     <div class="govuk-form-group">
-                      <label class="govuk-label" for="contact-by-text">
+                      <label class="govuk-label" for="outcomes">
                         Select outcome(s)
                       </label>
-                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text"
-                        type="tel" autocomplete="tel">
+                      <select name="outcomes" class="ui selection dropdown govuk-select pfs-multi-select" multiple=""
+                        id="outcomes">
+                        <option value="">Outcome(s)</option>
+                        <option value="GS">Green spaces</option>
+                        <option value="AQ">Air quality</option>
+                        <option value="TP">Trees planted</option>
+                      </select>
                     </div>
                   </div>
                 </div>
@@ -156,7 +180,7 @@
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" role="group" aria-describedby="timeframe-hint">
                 <legend class="govuk-fieldset__legend">
-                  Timeframe
+                  Select a timeframe
                 </legend>
                 <div class="govuk-date-input" id="timeframe">
                   <div class="govuk-date-input__item">
@@ -228,7 +252,7 @@
               </select>
             </div>
             <div class="govuk-button-group govuk-!-margin-bottom-0">
-              <button type="submitn" class="govuk-button" data-module="govuk-button">
+              <button type="submit" class="govuk-button" data-module="govuk-button">
                 Download
               </button>
               <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
