@@ -39,12 +39,12 @@
 				<a href="/" class="govuk-header__link govuk-header__link--homepage">
 					<span class="govuk-header__logotype">
 						<!--[if gt IE 8]><!-->
-						<img src="/assets/images/govuk-mask-icon.svg"
-							class="govuk-header__logotype-crown-fallback-image" width="36" height="32">
+						<img src="/assets/images/govuk-mask-icon.svg" class="govuk-header__logotype-crown-fallback-image" width="36"
+							height="32">
 						<!--<![endif]-->
 						<!--[if IE 8]>
-							<img src="/assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image" width="36" height="32">
-							<![endif]-->
+						<img src="/assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image" width="36" height="32">
+						<![endif]-->
 						<span class="govuk-header__logotype-text">GOV.UK</span>
 					</span>
 				</a>
@@ -75,13 +75,12 @@
 		<section class="govuk-main-wrapper pfs-section-bg-alt">
 			<div class="govuk-width-container">
 				<h1 class="govuk-heading-xl">Find a funded organisation</h1>
-				<form action="/v2/download-data-results.html#results" method="post" novalidate>
+				<form action="/v2/funded-organisation-results.html" method="post" novalidate>
 					<div class="govuk-form-group">
 						<label class="govuk-label" for="search">
 							Search
 						</label>
-						<input class="govuk-input govuk-input govuk-input--width-20" id="search" name="search"
-							type="text">
+						<input class="govuk-input govuk-input govuk-input--width-20" id="search" name="search" type="text" value="Canterbury">
 					</div>
 					<button class="govuk-button" data-module="govuk-button">
 						Search
@@ -94,71 +93,16 @@
 			<div class="govuk-width-container">
 				<div class="govuk-grid-row">
 					<div class="govuk-grid-column-full">
-						<h2 class="govuk-heading-l">List of funded organisations</h2>
-						<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-							<div class="govuk-accordion__section ">
-								<div class="govuk-accordion__section-header">
-									<h2 class="govuk-accordion__section-heading">
-										<span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-											A
-										</span>
-									</h2>
-								</div>
-								<div id="accordion-default-content-1" class="govuk-accordion__section-content"
-									aria-labelledby="accordion-default-heading-1">
-									<ul class="govuk-list govuk-!-margin-bottom-0">
-										<li>
-											<a class="govuk-link" href="#">Adur and Worthing Borough Council</a>
-										</li>
-										<li>
-											<a class="govuk-link" href="#">Adur District Council</a>
-										</li>
-										<li>
-											<a class="govuk-link" href="#">Allerdale Borough Council</a>
-										</li>
-										<li>
-											<a class="govuk-link" href="#">Amber Valley Borough Council</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="govuk-accordion__section ">
-								<div class="govuk-accordion__section-header">
-									<h2 class="govuk-accordion__section-heading">
-										<span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-											B
-										</span>
-									</h2>
-								</div>
-								<div id="accordion-default-content-2" class="govuk-accordion__section-content"
-									aria-labelledby="accordion-default-heading-2">
-								</div>
-							</div>
-							<div class="govuk-accordion__section ">
-								<div class="govuk-accordion__section-header">
-									<h2 class="govuk-accordion__section-heading">
-										<span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-											C
-										</span>
-									</h2>
-								</div>
-								<div id="accordion-default-content-3" class="govuk-accordion__section-content"
-									aria-labelledby="accordion-default-heading-3">
-								</div>
-							</div>
-							<div class="govuk-accordion__section ">
-								<div class="govuk-accordion__section-header">
-									<h2 class="govuk-accordion__section-heading">
-										<span class="govuk-accordion__section-button" id="accordion-default-heading-4">
-											D
-										</span>
-									</h2>
-								</div>
-								<div id="accordion-default-content-4" class="govuk-accordion__section-content"
-									aria-labelledby="accordion-default-heading-4">
-								</div>
-							</div>
-						</div>
+						<h2 class="govuk-heading-l">Search Results</h2>
+						<p class="govuk-hint">2 search results</p>
+						<ul class="govuk-list govuk-!-margin-bottom-0">
+							<li>
+								<a class="govuk-link" href="#">Canterbury City Council</a>
+							</li>
+							<li>
+								<a class="govuk-link" href="#">Chelmsford City Council</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -177,8 +121,7 @@
 					<span class="govuk-footer__licence-description">
 						All content is available under the
 						<a class="govuk-footer__link"
-							href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-							rel="license">Open
+							href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open
 							Government Licence v3.0</a>, except where otherwise stated
 					</span>
 				</div>
