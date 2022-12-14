@@ -83,13 +83,22 @@
 						<label class="govuk-label" for="search">
 							Search
 						</label>
-						<input class="govuk-input govuk-input govuk-input--width-20" id="search" name="search" type="text">
+						<div class="pfs-search-item__wrapper govuk-input--width-30">
+							<input class="govuk-input govuk-input" id="search-main-873dc4df" name="q" title="Search" type="search"
+								value="">
+							<div class="pfs-search__item">
+								<a href="../v2/find-project-results.html" class="pfs-search__submit" type="submit">
+									<svg class="pfs-search__icon" width="27" height="27" viewBox="0 0 27 27" fill="none"
+										xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+										<circle cx="12.0161" cy="11.0161" r="8.51613" stroke="currentColor" stroke-width="3"></circle>
+										<line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="currentColor" stroke-width="3">
+										</line>
+									</svg>
+								</a>
+							</div>
+						</div>
 					</div>
-					<a href="../v2/find-project-results.html" class="govuk-button" data-module="govuk-button">
-						Search
-					</a>
 				</form>
-			</div>
 			</div>
 		</section>
 		<section class="govuk-main-wrapper">
@@ -98,7 +107,7 @@
 					<div class="govuk-grid-column-full">
 						<h2 class="govuk-heading-l">List of projects</h2>
 						<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-							<div class="govuk-accordion__section ">
+							<div class="govuk-accordion__section">
 								<div class="govuk-accordion__section-header">
 									<h2 class="govuk-accordion__section-heading">
 										<span class="govuk-accordion__section-button" id="accordion-default-heading-1">
