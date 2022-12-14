@@ -39,8 +39,8 @@
 				<a href="../" class="govuk-header__link govuk-header__link--homepage">
 					<span class="govuk-header__logotype">
 						<!--[if gt IE 8]><!-->
-						<img src="../assets/images/govuk-mask-icon.svg" class="govuk-header__logotype-crown-fallback-image" width="36"
-							height="32">
+						<img src="../assets/images/govuk-mask-icon.svg" class="govuk-header__logotype-crown-fallback-image"
+							width="36" height="32">
 						<!--<![endif]-->
 						<!--[if IE 8]>
 						<img src="../assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image" width="36" height="32">
@@ -68,7 +68,7 @@
 						<a class="govuk-breadcrumbs__link" href="../v2/index.html">Find project information</a>
 					</li>
 					<li class="govuk-breadcrumbs__list-item">
-						<a class="govuk-breadcrumbs__link" href="#">Find a funded organisation</a>
+						<a class="govuk-breadcrumbs__link" href="#">Find an organisation</a>
 					</li>
 				</ol>
 			</div>
@@ -77,20 +77,28 @@
 	<main id="main-content" role="main">
 		<section class="govuk-main-wrapper pfs-section-bg-alt">
 			<div class="govuk-width-container">
-				<h1 class="govuk-heading-xl">Find a funded organisation</h1>
+				<h1 class="govuk-heading-xl">Find an organisation</h1>
 				<form action="#" method="post" novalidate>
 					<div class="govuk-form-group">
 						<label class="govuk-label" for="search">
 							Search
 						</label>
-						<input class="govuk-input govuk-input govuk-input--width-20" id="search" name="search" type="text"
-							value="Canterbury">
+						<div class="pfs-search-item__wrapper govuk-input--width-30">
+							<input class="govuk-input govuk-input" id="search-main-873dc4df" name="q" title="Search" type="search"
+								value="Canterbury">
+							<div class="pfs-search__item">
+								<a href="../v2/funded-organisation-results.html" class="pfs-search__submit" type="submit">
+									<svg class="pfs-search__icon" width="27" height="27" viewBox="0 0 27 27" fill="none"
+										xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+										<circle cx="12.0161" cy="11.0161" r="8.51613" stroke="currentColor" stroke-width="3"></circle>
+										<line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="currentColor" stroke-width="3">
+										</line>
+									</svg>
+								</a>
+							</div>
+						</div>
 					</div>
-					<a href="../v2/funded-organisation-results.html" class="govuk-button" data-module="govuk-button">
-						Search
-					</a>
 				</form>
-			</div>
 			</div>
 		</section>
 		<section class="govuk-main-wrapper">
@@ -101,10 +109,11 @@
 						<p class="govuk-hint">2 search results</p>
 						<ul class="govuk-list govuk-!-margin-bottom-0">
 							<li>
-								<a class="govuk-link" href="../v2/funded-organisation-city-council-summary.html">Canterbury City Council</a>
+								<a class="govuk-link" href="../v2/funded-organisation-city-council-summary.html">Canterbury City
+									Council</a>
 							</li>
 							<li>
-								<a class="govuk-link" href="#">Chelmsford City Council</a>
+								<a class="govuk-link" href="../v2/funded-organisation-city-council-summary.html">Chelmsford City Council</a>
 							</li>
 						</ul>
 					</div>

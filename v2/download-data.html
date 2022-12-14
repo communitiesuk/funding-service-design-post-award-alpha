@@ -38,8 +38,15 @@
 	<script src="../assets/javascript/transition.min.js"></script>
 	<script>
 		$(document).ready(function () {
-			console.log("ready!");
 			$('.pfs-multi-select').dropdown();
+
+			$("#results").hide();
+			$("#preview").click(function(){
+				$("#results").show();
+				$('html,body').animate({
+					scrollTop: $("#results").offset().top
+				});
+			});
 		});
 	</script>
 
@@ -64,206 +71,297 @@
 		</div>
 	</header>
 
-	<div class="govuk-width-container">
-		<div class="govuk-breadcrumbs">
-			<ol class="govuk-breadcrumbs__list">
-				<li class="govuk-breadcrumbs__list-item">
-					<a class="govuk-breadcrumbs__link" href="../v2/index.html">Department for Levelling Up, Housing &
-						Communities</a>
-				</li>
-				<li class="govuk-breadcrumbs__list-item">
-					<a class="govuk-breadcrumbs__link" href="../v2/index.html">Funded projects</a>
-				</li>
-				<li class="govuk-breadcrumbs__list-item">
-					<a class="govuk-breadcrumbs__link" href="../v2/index.html">Find project information</a>
-				</li>
-				<li class="govuk-breadcrumbs__list-item">
-					<a class="govuk-breadcrumbs__link" href="#">Download data</a>
-				</li>
-			</ol>
+	<div class="govuk-main-wrapper govuk-!-padding-top-0 govuk-!-padding-bottom-0">
+		<div class="govuk-width-container">
+			<div
+				class="govuk-breadcrumbs govuk-!-margin-top-0 govuk-!-margin-bottom-0 govuk-!-padding-top-3 govuk-!-padding-bottom-2">
+				<ol class="govuk-breadcrumbs__list">
+					<li class="govuk-breadcrumbs__list-item">
+						<a class="govuk-breadcrumbs__link" href="../v2/index.html">Department for Levelling Up, Housing &
+							Communities</a>
+					</li>
+					<li class="govuk-breadcrumbs__list-item">
+						<a class="govuk-breadcrumbs__link" href="../v2/index.html">Funded projects</a>
+					</li>
+					<li class="govuk-breadcrumbs__list-item">
+						<a class="govuk-breadcrumbs__link" href="../v2/index.html">Find project information</a>
+					</li>
+					<li class="govuk-breadcrumbs__list-item">
+						<a class="govuk-breadcrumbs__link" href="#">Download data</a>
+					</li>
+				</ol>
+			</div>
 		</div>
-		<main class="govuk-main-wrapper" id="main-content" role="main">
-			<h1 class="govuk-heading-xl">Download monitoring and evaluation data</h1>
-			<div class="govuk-grid-row">
-				<div class="govuk-grid-column-two-thirds">
-					<form action="#" method="post" novalidate>
-						<div class="govuk-form-group">
-							<label class="govuk-label" for="funds">
-								Filter by fund
-							</label>
-							<select name="funds" class="ui selection dropdown govuk-select pfs-multi-select" multiple="" id="funds">
-								<option value="">Select fund(s)</option>
-								<option value="LU">Levelling Up Fund</option>
-								<option value="TF">Towns Fund</option>
-							</select>
-						</div>
-						<div class="govuk-form-group">
-							<label class="govuk-label" for="area">
-								Filter by area
-							</label>
-							<select name="areas" class="ui selection dropdown govuk-select pfs-multi-select" multiple="" id="areas">
-								<option value="">Select area(s)</option>
-								<option value="NE">North East</option>
-								<option value="NW">North West</option>
-								<option value="SE">South East</option>
-								<option value="SW">South West</option>
-							</select>
-						</div>
-						<div class="govuk-form-group">
-							<label class="govuk-label" for="fund">
-								Filter by funded organisation
-							</label>
-							<select name="recipient" class="ui selection dropdown govuk-select pfs-multi-select" multiple=""
-								id="recipient">
-								<option value="">Select organisation(s)</option>
-								<option value="BH">Brighton and Hove</option>
-								<option value="BU">Buckinghamshire</option>
-							</select>
-						</div>
-						<div class="govuk-form-group">
-							<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-								<legend class="govuk-fieldset__legend">
-									Filter by data type
-								</legend>
-								<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-									<div class="govuk-checkboxes__item">
-										<input class="govuk-checkboxes__input" id="admin" name="admin" type="checkbox" value="admin">
-										<label class="govuk-label govuk-checkboxes__label" for="admin">
-											Project admin
-										</label>
-									</div>
-									<div class="govuk-checkboxes__item">
-										<input class="govuk-checkboxes__input" id="progress" name="contact" type="checkbox"
-											value="progress">
-										<label class="govuk-label govuk-checkboxes__label" for="progress">
-											Project progress
-										</label>
-									</div>
-									<div class="govuk-checkboxes__item">
-										<input class="govuk-checkboxes__input" id="register" name="contact" type="checkbox"
-											value="register">
-										<label class="govuk-label govuk-checkboxes__label" for="register">
-											Risk register
-										</label>
-									</div>
-									<div class="govuk-checkboxes__item">
-										<input class="govuk-checkboxes__input" id="profile" name="contact" type="checkbox" value="profile">
-										<label class="govuk-label govuk-checkboxes__label" for="profile">
-											Funding profile
-										</label>
-									</div>
-									<div class="govuk-checkboxes__item">
-										<input class="govuk-checkboxes__input" id="outcome" name="contact" type="checkbox"
-											value="text message" data-aria-controls="conditional-outcome">
-										<label class="govuk-label govuk-checkboxes__label" for="outcome">
-											Outcomes
-										</label>
-									</div>
-									<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
-										id="conditional-outcome">
-										<div class="govuk-form-group">
-											<label class="govuk-label" for="outcomes">
-												Select outcome(s)
+	</div>
+	<main id="main-content" role="main">
+		<section class="govuk-main-wrapper">
+			<div class="govuk-width-container">
+				<h1 class="govuk-heading-xl">Download monitoring and evaluation data</h1>
+				<div class="govuk-grid-row">
+					<div class="govuk-grid-column-two-thirds">
+						<form action="#" method="post" novalidate>
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="funds">
+									Filter by fund
+								</label>
+								<select name="funds" class="ui selection dropdown govuk-select pfs-multi-select" multiple="" id="funds">
+									<option value="">Select fund(s)</option>
+									<option value="LU">Levelling Up Fund</option>
+									<option value="TF">Towns Fund</option>
+								</select>
+							</div>
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="area">
+									Filter by area
+								</label>
+								<select name="areas" class="ui selection dropdown govuk-select pfs-multi-select" multiple="" id="areas">
+									<option value="">Select area(s)</option>
+									<option value="NE">North East</option>
+									<option value="NW">North West</option>
+									<option value="SE">South East</option>
+									<option value="SW">South West</option>
+								</select>
+							</div>
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="fund">
+									Filter by funded organisation
+								</label>
+								<select name="recipient" class="ui selection dropdown govuk-select pfs-multi-select" multiple=""
+									id="recipient">
+									<option value="">Select organisation(s)</option>
+									<option value="BH">Brighton and Hove City Council</option>
+									<option value="BU">Buckinghamshire County Council</option>
+									<option value="CT">Canterbury City Council</option>
+									<option value="LN">City of London</option>
+									<option value="DO">Dover District Council</option>
+								</select>
+							</div>
+							<div class="govuk-form-group">
+								<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+									<legend class="govuk-fieldset__legend">
+										Filter by data type
+									</legend>
+									<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+										<div class="govuk-checkboxes__item">
+											<input class="govuk-checkboxes__input" id="admin" name="admin" type="checkbox" value="admin">
+											<label class="govuk-label govuk-checkboxes__label" for="admin">
+												Project admin
 											</label>
-											<select name="outcomes" class="ui selection dropdown govuk-select pfs-multi-select" multiple=""
-												id="outcomes">
-												<option value="">Outcome(s)</option>
-												<option value="GS">Green spaces</option>
-												<option value="AQ">Air quality</option>
-												<option value="TP">Trees planted</option>
-											</select>
+										</div>
+										<div class="govuk-checkboxes__item">
+											<input class="govuk-checkboxes__input" id="progress" name="contact" type="checkbox"
+												value="progress">
+											<label class="govuk-label govuk-checkboxes__label" for="progress">
+												Project progress
+											</label>
+										</div>
+										<div class="govuk-checkboxes__item">
+											<input class="govuk-checkboxes__input" id="register" name="contact" type="checkbox"
+												value="register">
+											<label class="govuk-label govuk-checkboxes__label" for="register">
+												Risk register
+											</label>
+										</div>
+										<div class="govuk-checkboxes__item">
+											<input class="govuk-checkboxes__input" id="profile" name="contact" type="checkbox"
+												value="profile">
+											<label class="govuk-label govuk-checkboxes__label" for="profile">
+												Funding profile
+											</label>
+										</div>
+										<div class="govuk-checkboxes__item">
+											<input class="govuk-checkboxes__input" id="outcome" name="contact" type="checkbox"
+												value="text message" data-aria-controls="conditional-outcome">
+											<label class="govuk-label govuk-checkboxes__label" for="outcome">
+												Outcomes
+											</label>
+										</div>
+										<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
+											id="conditional-outcome">
+											<div class="govuk-form-group">
+												<label class="govuk-label" for="outcomes">
+													Select outcome(s)
+												</label>
+												<select name="outcomes" class="ui selection dropdown govuk-select pfs-multi-select" multiple=""
+													id="outcomes">
+													<option value="">Outcome(s)</option>
+													<option value="GS">Green spaces</option>
+													<option value="AQ">Air quality</option>
+													<option value="TP">Trees planted</option>
+												</select>
+											</div>
 										</div>
 									</div>
-								</div>
-							</fieldset>
-						</div>
-						<div class="govuk-form-group">
-							<fieldset class="govuk-fieldset" role="group" aria-describedby="timeframe-hint">
-								<legend class="govuk-fieldset__legend">
-									Select a timeframe
-								</legend>
-								<div class="govuk-date-input" id="timeframe">
-									<div class="govuk-date-input__item">
-										<div class="govuk-form-group">
-											<label class="govuk-label govuk-date-input__label" for="timeframe-day">
-												Day
-											</label>
-											<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="timeframe-day"
-												name="timeframe-day" type="text" inputmode="numeric">
+								</fieldset>
+							</div>
+							<div class="govuk-form-group">
+								<fieldset class="govuk-fieldset" role="group" aria-describedby="timeframe-hint">
+									<legend class="govuk-fieldset__legend">
+										Select a timeframe
+									</legend>
+									<div class="govuk-date-input" id="timeframe">
+										<div class="govuk-date-input__item">
+											<div class="govuk-form-group">
+												<label class="govuk-label govuk-date-input__label" for="timeframe-day">
+													Day
+												</label>
+												<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="timeframe-day"
+													name="timeframe-day" type="text" inputmode="numeric">
+											</div>
+										</div>
+										<div class="govuk-date-input__item">
+											<div class="govuk-form-group">
+												<label class="govuk-label govuk-date-input__label" for="timeframe-month">
+													Month
+												</label>
+												<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="timeframe-month"
+													name="timeframe-month" type="text" inputmode="numeric">
+											</div>
+										</div>
+										<div class="govuk-date-input__item">
+											<div class="govuk-form-group">
+												<label class="govuk-label govuk-date-input__label" for="timeframe-year">
+													Year
+												</label>
+												<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="timeframe-year"
+													name="timeframe-year" type="text" inputmode="numeric">
+											</div>
+										</div>
+										<div class="govuk-date-input__item">
+											<p class="govuk-body">to</p>
+										</div>
+										<div class="govuk-date-input__item">
+											<div class="govuk-form-group">
+												<label class="govuk-label govuk-date-input__label" for="timeframe-day">
+													Day
+												</label>
+												<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="timeframe-day"
+													name="timeframe-day" type="text" inputmode="numeric">
+											</div>
+										</div>
+										<div class="govuk-date-input__item">
+											<div class="govuk-form-group">
+												<label class="govuk-label govuk-date-input__label" for="timeframe-month">
+													Month
+												</label>
+												<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="timeframe-month"
+													name="timeframe-month" type="text" inputmode="numeric">
+											</div>
+										</div>
+										<div class="govuk-date-input__item">
+											<div class="govuk-form-group">
+												<label class="govuk-label govuk-date-input__label" for="timeframe-year">
+													Year
+												</label>
+												<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="timeframe-year"
+													name="timeframe-year" type="text" inputmode="numeric">
+											</div>
 										</div>
 									</div>
-									<div class="govuk-date-input__item">
-										<div class="govuk-form-group">
-											<label class="govuk-label govuk-date-input__label" for="timeframe-month">
-												Month
-											</label>
-											<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="timeframe-month"
-												name="timeframe-month" type="text" inputmode="numeric">
-										</div>
-									</div>
-									<div class="govuk-date-input__item">
-										<div class="govuk-form-group">
-											<label class="govuk-label govuk-date-input__label" for="timeframe-year">
-												Year
-											</label>
-											<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="timeframe-year"
-												name="timeframe-year" type="text" inputmode="numeric">
-										</div>
-									</div>
-									<div class="govuk-date-input__item">
-										<p class="govuk-body">to</p>
-									</div>
-									<div class="govuk-date-input__item">
-										<div class="govuk-form-group">
-											<label class="govuk-label govuk-date-input__label" for="timeframe-day">
-												Day
-											</label>
-											<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="timeframe-day"
-												name="timeframe-day" type="text" inputmode="numeric">
-										</div>
-									</div>
-									<div class="govuk-date-input__item">
-										<div class="govuk-form-group">
-											<label class="govuk-label govuk-date-input__label" for="timeframe-month">
-												Month
-											</label>
-											<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="timeframe-month"
-												name="timeframe-month" type="text" inputmode="numeric">
-										</div>
-									</div>
-									<div class="govuk-date-input__item">
-										<div class="govuk-form-group">
-											<label class="govuk-label govuk-date-input__label" for="timeframe-year">
-												Year
-											</label>
-											<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="timeframe-year"
-												name="timeframe-year" type="text" inputmode="numeric">
-										</div>
-									</div>
-								</div>
-							</fieldset>
-						</div>
-						<div class="govuk-form-group">
-							<label class="govuk-label" for="data-format">
-								Data format
-							</label>
-							<select class="govuk-select" id="data-format" name="data-format">
-								<option value="csv" selected>CSV</option>
-							</select>
-						</div>
-						<div class="govuk-button-group govuk-!-margin-bottom-0">
-							<a href="../v2/download-data-results.html#results" type="submit" class="govuk-button" data-module="govuk-button">
-								Download
-							</a>
-							<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-								Preview
-							</button>
-						</div>
-					</form>
+								</fieldset>
+							</div>
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="data-format">
+									Data format
+								</label>
+								<select class="govuk-select" id="data-format" name="data-format">
+									<option value="csv" selected>CSV</option>
+								</select>
+							</div>
+							<div class="govuk-button-group govuk-!-margin-bottom-0">
+								<a href="#" type="submit" class="govuk-button" data-module="govuk-button">
+									Download
+								</a>
+								<a href="#" id="preview" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+									Preview
+								</a>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
-		</main>
-	</div>
+		</section>
+		<section id="results" class="govuk-main-wrapper pfs-section-bg-alt">
+			<div class="govuk-width-container">
+				<div class="govuk-grid-row">
+					<div class="govuk-grid-column-full">
+						<h2 class="govuk-heading-l">Results</h2>
+					</div>
+					<div class="govuk-grid-column-two-thirds">
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-date-input__label govuk-!-font-weight-bold" for="timeframe-year">
+								Fund(s):
+							</label>
+							<strong class="govuk-tag govuk-tag--blue">LEVELLING UP FUND</strong>
+							<strong class="govuk-tag govuk-tag--blue">TOWNS FUND</strong>
+						</div>
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-date-input__label govuk-!-font-weight-bold" for="timeframe-year">
+								Fund Recipient(s):
+							</label>
+							<strong class="govuk-tag govuk-tag--blue">SOUTH EAST</strong>
+						</div>
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-date-input__label govuk-!-font-weight-bold" for="timeframe-year">
+								Data type(s):
+							</label>
+							<strong class="govuk-tag govuk-tag--blue">AIR QUALITY (N02)</strong>
+							<strong class="govuk-tag govuk-tag--blue">GREEN SPACES</strong>
+							<strong class="govuk-tag govuk-tag--blue">TREES PLANTED</strong>
+						</div>
+					</div>
+					<div class="govuk-grid-column-two-thirds">
+						<dl class="govuk-summary-list govuk-summary-list--no-border">
+							<div class="govuk-summary-list__row">
+								<dt class="govuk-summary-list__key">
+									Timeframe:
+								</dt>
+								<dd class="govuk-summary-list__value">
+									2 August 2020 to 8 August 2021
+								</dd>
+							</div>
+							<div class="govuk-summary-list__row">
+								<dt class="govuk-summary-list__key">
+									Data format:
+								</dt>
+								<dd class="govuk-summary-list__value">
+									CSV
+								</dd>
+							</div>
+						</dl>
+					</div>
+					<div class="govuk-grid-column-full">
+						<p class="govuk-heading-s">Projects</p>
+						<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
+							<li>
+								<a class="govuk-link govuk-!-margin-bottom-0" href="../v2/find-project-summary.html">TF 26534 - High Street redevelopment - Canterbury
+									City Council (Towns Fund)</a>
+								<p class="govuk-!-margin-top-1"><strong>Data collection limitations: </strong>The air quality sensor ran
+									out of power from March
+									2021, so stopped recording for two months.</p>
+							</li>
+							<li>
+								<a class="govuk-link govuk-!-margin-bottom-0" href="../v2/find-project-summary.html">TF 56652 - West Lindsey town deal - West Lindsey
+									Council (Towns Fund)</a>
+								<p class="govuk-!-margin-top-1"><strong>Data collection limitations: </strong>We changed contractors
+									part way through data collection so there is a period where no data was collected.</p>
+							</li>
+							<li>
+								<a class="govuk-link govuk-!-margin-bottom-0" href="../v2/find-project-summary.html">LUF 38923 - Bakely Centre - Bakely Council
+									(Levelling Up Fund)
+								</a>
+							</li>
+							<li>
+								<a class="govuk-link govuk-!-margin-bottom-0" href="../v2/find-project-summary.html">LUF 89232 - Regenerate green spaces - Canterbury
+									City Council (Levelling Up Fund)
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 
 	<footer class="govuk-footer" role="contentinfo">
 		<div class="govuk-width-container">
