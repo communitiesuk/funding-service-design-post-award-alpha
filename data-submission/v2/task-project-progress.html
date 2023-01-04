@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+
+<head>
+  <meta charset="utf-8">
+  <title>GOV.UK - Manage your reporting forms</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0c0c">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="../../assets/images/favicon.ico" type="image/x-icon">
+  <link rel="mask-icon" href="../../assets/images/govuk-mask-icon.svg" color="#0b0c0c">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/govuk-apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="../../assets/images/govuk-apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../assets/images/govuk-apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" href="../../assets/images/govuk-apple-touch-icon.png">
+
+  <!--[if !IE 8]><!-->
+  <link href="../../assets/stylesheets/govuk-frontend-4.4.0.min.css" rel="stylesheet">
+  <link href="../../assets/stylesheets/pfs-custom-styles.css" rel="stylesheet">
+  <!--<![endif]-->
+
+  <!--[if IE 8]>
+    <link href="../../assets/stylesheets/govuk-frontend-ie8-4.4.0.min.css" rel="stylesheet">
+  <![endif]-->
+</head>
+
+<body class="govuk-template__body">
+  <script>
+    document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+  </script>
+
+  <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+  <header class="govuk-header" role="banner" data-module="govuk-header">
+    <div class="govuk-header__container govuk-width-container">
+      <div class="govuk-header__logo">
+        <a href="../../" class="govuk-header__link govuk-header__link--homepage">
+          <span class="govuk-header__logotype">
+            <!--[if gt IE 8]><!-->
+            <img src="../../assets/images/govuk-mask-icon.svg" class="govuk-header__logotype-crown-fallback-image"
+              width="36" height="32">
+            <!--<![endif]-->
+            <!--[if IE 8]>
+						<img src="../../assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image" width="36" height="32">
+						<![endif]-->
+            <span class="govuk-header__logotype-text">GOV.UK</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="govuk-main-wrapper govuk-!-padding-top-0 govuk-!-padding-bottom-0 pfs-section-bg-alt">
+    <div class="govuk-width-container">
+      <a href="../../data-submission/v2/task-breakdown.html" class="govuk-back-link">Back</a>
+    </div>
+  </div>
+
+  <main id="main-content" role="main">
+    <section class="govuk-main-wrapper pfs-section-bg-alt">
+      <div class="govuk-width-container">
+        <h1 class="govuk-heading-xl">Project progress</h1>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <p class="govuk-body-m">Tell us how your project has progressed between July - September 2022 (Q2).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="govuk-main-wrapper">
+      <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+                <form action="#" method="post" novalidate>
+                  <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--m" for="project-progress">
+                        How is your project progressing against your original project monitoring update?
+                      </label>
+                      <div id="project-progress-hint" class="govuk-hint">
+                        This may include changes to your finance, delivery plan, risks outputs or outcomes.
+                      </div>
+                      <textarea class="govuk-textarea govuk-js-character-count" id="project-progress"
+                        name="project-progress" rows="5"
+                        aria-describedby="project-progress-info project-progress-hint"></textarea>
+                    </div>
+                    <div id="project-progress-info" class="govuk-hint govuk-character-count__message">
+                      You can enter up to 500 characters
+                    </div>
+                  </div>
+                  <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--m" for="project-progress-q2">
+                        Tell us how your project has progressed in Q2?
+                      </label>
+                      <div id="project-progress-q2-hint" class="govuk-hint">
+                        This may include any project activities or good news stories e.g media coverage on your project.
+                      </div>
+                      <textarea class="govuk-textarea govuk-js-character-count" id="project-progress-q2"
+                        name="project-progress-q2" rows="5"
+                        aria-describedby="project-progress-q2-info project-progress-q2-hint"></textarea>
+                    </div>
+                    <div id="project-progress-q2-info" class="govuk-hint govuk-character-count__message">
+                      You can enter up to 500 characters
+                    </div>
+                  </div>
+                  <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--m" for="project-challenges">
+                        What challenges do you expect to face in the next 6 to 12 months?
+                      </label>
+                      <div id="project-challenges-hint" class="govuk-hint">
+                        Please include timeframes and expected challenges.
+                      </div>
+                      <textarea class="govuk-textarea govuk-js-character-count" id="project-challenges"
+                        name="project-challenges" rows="5"
+                        aria-describedby="project-challenges-info project-challenges-hint"></textarea>
+                    </div>
+                    <div id="project-challenges-info" class="govuk-hint govuk-character-count__message">
+                      You can enter up to 500 characters
+                    </div>
+                  </div>
+                  <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--m" for="project-milestones">
+                        Tell us about any milestones you expect to reach in Q3 (October - December)
+                      </label>
+                      <div id="project-milestones-hint" class="govuk-hint">
+                        Please include timeframes of key activities e.g. first spade in the ground. completed designs, building fit out.
+                      </div>
+                      <textarea class="govuk-textarea govuk-js-character-count" id="project-milestones"
+                        name="project-milestones" rows="5"
+                        aria-describedby="project-milestones-info project-milestones-hint"></textarea>
+                    </div>
+                    <div id="project-milestones-info" class="govuk-hint govuk-character-count__message">
+                      You can enter up to 500 characters
+                    </div>
+                  </div>
+                  <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--m" for="project-additional">
+                        Do you require additional support from the Levelling Up Fund team?
+                      </label>
+                      <textarea class="govuk-textarea govuk-js-character-count" id="project-additional"
+                        name="project-additional" rows="5"
+                        aria-describedby="project-additional-info project-additional-hint"></textarea>
+                    </div>
+                    <div id="project-additional-info" class="govuk-hint govuk-character-count__message">
+                      You can enter up to 500 characters
+                    </div>
+                  </div>
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-label--m" for="project-file-upload">
+                      Upload supporting documents
+                    </label>
+                    <div id="project-milestones-hint" class="govuk-hint">
+                      Please include documents that provide additional detail about the progress of your project.
+                    </div>
+                    <input class="govuk-file-upload" id="project-file-upload" name="project-file-upload" type="file">
+                  </div>
+                  <div class="govuk-button-group govuk-!-margin-bottom-0">
+                    <a href="../v2/download-data-results.html#results" type="submit" class="govuk-button" data-module="govuk-button">
+                      Save and continue
+                    </a>
+                    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                      Back
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="govuk-footer" role="contentinfo">
+    <div class="govuk-width-container">
+      <div class="govuk-footer__meta">
+        <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+          <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo"
+            xmlns="http://www.w3.org/5000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+            <path fill="currentColor"
+              d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145" />
+          </svg>
+          <span class="govuk-footer__licence-description">
+            All content is available under the
+            <a class="govuk-footer__link"
+              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open
+              Government Licence v3.0</a>, except where otherwise stated
+          </span>
+        </div>
+        <div class="govuk-footer__meta-item">
+          <a class="govuk-footer__link govuk-footer__copyright-logo"
+            href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">©
+            Crown copyright</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/javascript/govuk-frontend-4.4.0.min.js"></script>
+  <script>
+    window.GOVUKFrontend.initAll()
+  </script>
+</body>
+
+</html>
